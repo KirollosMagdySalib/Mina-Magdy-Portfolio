@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+:root {
+  --primary-color: #432dd7;
+}
+.nav-font {
+  font-family: "Edu QLD Hand", cursive;
+}
+.bg-gray {
+  background-color: #f8fafc;
+}
+a.nav-link {
+  color: inherit;
+  font-size: 1.125rem;
+}
+.bg-hireme {
+  background-color: var(--primary-color);
+  border: var(--primary-color);
+}
+.navbar-nav .nav-link.active {
+  color: var(--primary-color);
+}
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Fluid heading: reaches the original 60px at ~1200px and above */
+.fs-60px {
+  font-size: clamp(2rem, 1.2rem + 4vw, 60px);
+}
+.bg-myprimary {
+  color: var(--primary-color);
+}
+.line-hieght {
+  line-height: 1.8;
+}
+.text-gray {
+  color: rgba(33, 33, 48, 0.562);
+}
+
+/* Hero buttons: content-sized on small screens, 25% width on desktop (original) */
+.hero-btn {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (min-width: 1200px) {
+  .hero-btn {
+    width: 25%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* Keep anchored sections from hiding under the fixed navbar */
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
+.btn-contact .arrow-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-contact:hover .arrow-icon {
+  transform: translateX(6px);
+}
+.text-09c {
+  color: #09c;
+}
+.text-teal {
+  color: teal;
+}
+.bg-card {
+  background-color: rgba(69, 85, 108, 0.1);
+}
+
+/* About cards: stacked full-width below 768px, three across from 768px */
+.w-33 {
+  width: auto;
+}
+@media (min-width: 768px) {
+  .w-33 {
+    width: 33.333%;
+  }
+}
+.bg-lightblue {
+  color: #2b2a6b;
+}
+.skill-icon {
+  width: 56px;
+  height: 56px;
+  font-size: 22px;
+}
+
+/* Hover animation */
+.skill-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.contact-card {
+  border: 1px solid #f1f1f5;
+  border-radius: 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+/* Only on devices that can really hover, so touch screens don't get stuck scaled / overflowing */
+@media (hover: hover) {
+  .skill-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+  }
+  .contact-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+  }
+}
+.contact-icon {
+  width: 64px;
+  height: 64px;
+  font-size: 26px;
+}
+.icon-email {
+  background: #eef0fa;
+  color: #4b3fd6;
+}
+.link-email {
+  color: #4b3fd6;
+}
+.link-email:hover {
+  color: #2b2a6b;
+}
+.icon-autocad {
+  background: #e8f0fe;
+  color: #2563eb;
+}
+.icon-revit {
+  background: #fff3e0;
+  color: #f97316;
+}
+.icon-sap {
+  background: #f3e8ff;
+  color: #9333ea;
+}
+.icon-etabs {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.icon-safe {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.icon-csi {
+  background: #cffafe;
+  color: #0891b2;
+}
+.icon-asd {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+.icon-cutting {
+  background: #fce7f3;
+  color: #db2777;
+}
+.icon-sokkia {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+.icon-office {
+  background: #ccfbf1;
+  color: #0d9488;
+}
+.icon-quantity {
+  background: #fef3c7;
+  color: #d97706;
+}
+.icon-shop {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+/* Project cards: 1 per row (<768), 2 per row (768-991), 3 per row (>=992, original 30%) */
+.w-30 {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .w-30 {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .w-30 {
+    width: 30%;
+  }
+}
+
+.social-link {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+.social-link:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  padding: 12px 14px;
+  background-color: #f9fafb;
+  font-size: 15px;
+}
+.form-control::placeholder {
+  color: #9ca3af;
+}
+.form-control:focus {
+  border-color: #4B3FD6;
+  box-shadow: 0 0 0 4px rgba(119, 109, 231, 0.15);
+  background-color: #ffffff;
+}
+.form-label {
+  color: #374151;
+  font-size: 14px;
+}
+/* ===== Footer ===== */
+.site-footer {
+  background-color: #0f172a;
+}
+.footer-brand {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 1.75rem);
+  letter-spacing: -0.5px;
+}
+.footer-text {
+  color: #94a3b8;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.footer-email {
+  background-color: #1a2438;
+  padding: 0.9rem 1.5rem;
+  font-size: 1.05rem;
+  transition: background-color 0.25s ease;
+}
+.footer-email:hover {
+  background-color: #243049;
+  color: #fff;
+}
+.footer-title {
+  font-size: 1.125rem;
+}
+.footer-link {
+  color: #e2e8f0;
+  font-size: 1.125rem;
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: #818cf8;
+}
+.footer-social {
+  width: 50px;
+  height: 50px;
+  background-color: #1e293b;
+  font-size: 1.25rem;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+.footer-social:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-3px);
+}
+.footer-divider {
+  border-color: #334155;
+  opacity: 0.6;
+}
+.footer-muted {
+  color: #64748b;
+}
